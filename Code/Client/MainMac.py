@@ -1,16 +1,24 @@
 #!/usr/bin/python 
 # -*- coding: utf-8 -*-
+import numpy as np
+import cv2
+import socket
 import os
+import io
+import time
+import imghdr
+import sys
+from threading import Timer
 from threading import Thread
-
-from PyQt6.QtCore import *
-from PyQt6.QtGui import *
-from PyQt6.QtWidgets import *
-
-from Client_Ui import Ui_Client
+from PIL import Image
 from Command import COMMAND as cmd
 from Thread import *
+from Client_UiMac import Ui_Client
 from Video import *
+from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtCore import *
+from PyQt6.QtWidgets import *
+from PyQt6.QtGui import *
 
 
 class mywindow(QMainWindow, Ui_Client):
@@ -635,3 +643,6 @@ if __name__ == '__main__':
     myshow = mywindow()
     myshow.show();
     sys.exit(app.exec())
+
+
+
